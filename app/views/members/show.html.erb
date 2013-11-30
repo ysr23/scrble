@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @member.name %>
+</p>
+
+<p>
+  <b>Address1:</b>
+  <%= @member.address1 %>
+</p>
+
+<p>
+  <b>Adress2:</b>
+  <%= @member.adress2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @member.city %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @member.postcode %>
+</p>
+
+<p>
+  <b>Joindate:</b>
+  <%= @member.joindate.strftime("%d %b %Y") %>
+</p>
+<% m = @member.profile %>
+
+<p>
+  <b>Games Played:</b>
+  <%= m[:games_played] %>
+</p>
+<p>
+  <b>Games Won:</b>
+  <%= m[:games_won] %>
+</p>
+<p>
+  <b>Games Lost:</b>
+  <%= m[:games_lost] %>
+</p>
+<p>
+  <b>Score Average:</b>
+  <%= m[:score_avg] %>
+</p>
+<p>
+  <b>Highest Score:</b>
+  <%= m[:hi_score] %>
+</p>
+<p>
+  <b>Highest Score Location:</b>
+  <%= m[:hi_score_game_location] %>
+</p>
+<p>
+  <b>Date of Highest Score:</b>
+  <%= m[:hi_score_game_date].strftime("%d %b %Y") if m[:hi_score_game_date]  %>
+</p>
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>
