@@ -1,0 +1,39 @@
+<h1>Scrabble Club Games</h1>
+<h4><a href="/members">Click here for members</a></h4> 
+<table>
+  <tr>
+    <th>Player1</th>
+    <th>Player2</th>
+    <th>P1 score</th>
+    <th>P2 score</th>
+    <th>Winner</th>
+    <th>Loser</th>
+    <th>Draw</th>
+    <th>Location</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @games.each do |game| %>
+  <tr>
+    <td><%= Member.find(game.player1).name %></td>
+    <td><%= Member.find(game.player2).name %></td>
+    <td><%= game.p1_score %></td>
+    <td><%= game.p2_score %></td>
+    <td><%= Member.find(game.winner).name if game.winner %></td>
+    <td><%= Member.find(game.loser).name if game.loser %></td>
+    <td><%= game.draw %></td>
+    <td><%= game.location %></td>
+    <td><%= game.date_played.strftime("%d %b %Y")%></td>
+    <td><%= link_to 'Show', game %></td>
+    <td><%= link_to 'Edit', edit_game_path(game) %></td>
+    <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Game', new_game_path %>

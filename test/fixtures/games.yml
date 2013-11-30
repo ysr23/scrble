@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  player1: 1
+  player2: 1
+  p1_score: 1
+  p2_score: 1
+  winner: 1
+  loser: 1
+  draw: false
+  location: MyString
+  date_played: 2013-11-30 00:18:14
+
+two:
+  player1: 1
+  player2: 1
+  p1_score: 1
+  p2_score: 1
+  winner: 1
+  loser: 1
+  draw: false
+  location: MyString
+  date_played: 2013-11-30 00:18:14

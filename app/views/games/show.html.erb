@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Player1:</b>
+  <%= Member.find(@game.player1).name %>
+</p>
+
+<p>
+  <b>Player2:</b>
+  <%= Member.find(@game.player2).name %>
+</p>
+
+<p>
+  <b>P1 score:</b>
+  <%= @game.p1_score %>
+</p>
+
+<p>
+  <b>P2 score:</b>
+  <%= @game.p2_score %>
+</p>
+
+<p>
+  <b>Winner:</b>
+  <%= Member.find(@game.winner).name %>
+</p>
+
+<p>
+  <b>Loser:</b>
+  <%= Member.find(@game.loser).name %>
+</p>
+
+<p>
+  <b>Draw:</b>
+  <%= @game.draw %>
+</p>
+<p>
+  <b>Location:</b>
+  <%= @game.location %>
+</p>
+<p>
+  <b>Date Played:</b>
+  <%= @game.date_played.strftime("%d %b %Y")%>
+</p>
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>
