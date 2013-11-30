@@ -18,8 +18,8 @@
 
 <% @games.each do |game| %>
   <tr>
-    <td><%= Member.find(game.player1).name %></td>
-    <td><%= Member.find(game.player2).name %></td>
+    <td><%= link_to Member.find(game.player1).name, Member.find(game.player1) %></td>
+    <td><%= link_to Member.find(game.player2).name, Member.find(game.player2) %></td>
     <td><%= game.p1_score %></td>
     <td><%= game.p2_score %></td>
     <td><%= Member.find(game.winner).name if game.winner %></td>
