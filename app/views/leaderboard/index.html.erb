@@ -5,6 +5,7 @@
   <tr>
     <th>Name</th>
     <th>City</th>
+    <th>Games Played</th>
     <th>Average Score</th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
   <tr>
     <td><%= member[:member].name %></td>
     <td><%= member[:member].city %></td>
+    <td><%= member[:games_played] %></td>
     <td><%= member[:score_avg].round(2) %></td>
   </tr>
 <% end %>

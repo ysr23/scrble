@@ -8,7 +8,8 @@ class Leaderboard
       if (profile[:games_played] >= 10)
         member_info = {
           :member => member,
-          :score_avg => profile[:score_avg]
+          :score_avg => profile[:score_avg],
+          :games_played => profile[:games_played]
         }
         members_with_at_least_ten_matches << member_info
       end
