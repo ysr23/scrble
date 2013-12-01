@@ -3,8 +3,12 @@ Scrabble::Application.routes.draw do
 
 
   resources :members
+  resources :leaderboard
 
-root :to => 'members#index', via: 'get'
+
+  root :to => 'members#index', via: 'get'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
