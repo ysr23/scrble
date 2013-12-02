@@ -14,7 +14,7 @@ class Leaderboard
         members_with_at_least_ten_matches << member_info
       end
     }
-    members_with_at_least_ten_matches.sort_by { |member_info|
+    members_with_at_least_ten_matches.sort_by! { |member_info|
       member_info[:score_avg]
     }
     #sort in descending order of score
