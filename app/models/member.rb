@@ -1,5 +1,5 @@
 class Member < ActiveRecord::Base
-  attr_accessible :address1, :adress2, :city, :joindate, :name, :postcode
+  attr_accessible :address1, :address2, :city, :joindate, :name, :postcode
   has_many :games
 
   def profile
