@@ -1,6 +1,6 @@
 class Member < ActiveRecord::Base
   attr_accessible :address1, :address2, :city, :joindate, :name, :postcode
-  has_many :games
+  has_and_belongs_to_many :games
 
   def profile
     games_played = Game.where("player1 = ? OR player2 = ?", self.id, self.id)

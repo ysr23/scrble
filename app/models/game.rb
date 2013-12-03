@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
   attr_accessible :date_played, :draw, :location, :loser, :p1_score, :p2_score, :player1, :player2, :winner
-  has_many :members
+  has_and_belongs_to_many :members
   validates :player1, presence: true
   validates :player2, presence: true
   validates :p1_score, presence: true
